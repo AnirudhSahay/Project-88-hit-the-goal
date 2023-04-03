@@ -52,9 +52,10 @@ function my_keydown(e)
 	and make canvas border 'red'. */
 	
 if((ball_x==hole_x)&& (ball_y==hole_y)){
+	canvas.remove(ball_obj);
 	ball_x=10000;
 	ball_y=10000;
-	window.removeEventListener("keydown", my_keydown)
+	window.removeEventListener("keydown", my_keydown);
 	document.getElementById("hd3").innerHTML="You have hit the goal!!!!!!";
 	document.getElementById("myCanvas").style.borderColor="red";
 	
